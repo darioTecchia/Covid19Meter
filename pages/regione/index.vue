@@ -89,7 +89,6 @@
 
 <script>
 import MainChartExample from "~/components/dashboard/MainChartExample";
-import RadarExample from "~/components/charts/RadarExample";
 
 const moment = require("moment-timezone");
 moment.locale("it");
@@ -167,7 +166,6 @@ export default {
   },
   components: {
     MainChartExample,
-    RadarExample
   },
   mounted() {
     this.getRegionalData(1, this.data, this.data);
