@@ -29,3 +29,6 @@ Go to [http://localhost:3000](http://localhost:3000)
 $ npm run build
 $ npm start
 ```
+
+### Datasets
+[https://www.kaggle.com/paultimothymooney/coronavirus-in-italy?select=dati-json](https://www.kaggle.com/paultimothymooney/coronavirus-in-italy?select=dati-json)
