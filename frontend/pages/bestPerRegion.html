@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Covid19 Meter</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="../src/img/covid19.svg" type="image/x-icon" />
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../plugins/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="../plugins/icon-kit/dist/css/iconkit.min.css">
+        <link rel="stylesheet" href="../plugins/ionicons/dist/css/ionicons.min.css">
+        <link rel="stylesheet" href="../plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+        <link rel="stylesheet" href="../plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap.css">
+        <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+        <link rel="stylesheet" href="../plugins/weather-icons/css/weather-icons.min.css">
+        <link rel="stylesheet" href="../plugins/c3/c3.min.css">
+        <link rel="stylesheet" href="../plugins/owl.carousel/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="../plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../dist/css/theme.min.css">
+        <script src="../src/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <header class="header-top" header-theme="light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between">
+                        <div class="top-menu d-flex align-items-center">
+                            <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+                            <div class="header-search">
+                                <div class="input-group">
+                                    <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
+                                </div>
+                            </div>
+                            <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="page-wrap">
+                <div class="app-sidebar colored">
+                    <div class="sidebar-header">
+                        <a class="header-brand" href="../index.html">
+                            <div class="logo-img">
+                               <img src="../src/img/covid19.svg" class="header-brand-img" alt="lavalite"> 
+                            </div>
+                            <span class="text">Covid19 Meter</span>
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-content">
+                        <div class="nav-container">
+                            <nav id="main-menu-navigation" class="navigation-main">
+                                <div class="nav-lavel">Panoramica</div>
+                                <div class="nav-item active">
+                                    <a href="../index.html"><i class="ik ik-bar-chart-2"></i><span>Generale</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="./perRegion.html"><i class="ik ik-bar-chart-2"></i><span>Per regione</span> <span class="badge badge-success">New</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="./perProvincia.html"><i class="ik ik-bar-chart-2"></i><span>Per provincia</span> <span class="badge badge-danger">150+</span></a>
+                                </div>
+                                <div class="nav-lavel">Confronto</div>
+                                <div class="nav-item">
+                                    <a href="./graph.html"><i class="ik ik-clipboard"></i><span>Grafici</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="./tables.html"><i class="ik ik-clipboard"></i><span>Tabelle</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="./worstPerRegion.html"><i class="ik ik-users"></i><span>Peggiore per regione</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="./bestPerRegion.html"><i class="ik ik-users"></i><span>Migliore per regione</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="container-fluid">
+                        <div class="page-header">
+                            <div class="row align-items-end">
+                                <div class="col-lg-8">
+                                    <div class="page-header-title">
+                                        <i class="ik ik-home bg-blue"></i>
+                                        <div class="d-inline">
+                                            <h5>Migliore per regione</h5>
+                                            <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <nav class="breadcrumb-container" aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="../index.html"><i class="ik ik-home"></i></a>
+                                                <li class="breadcrumb-item">
+                                                    <a href="#">Confronto</a>
+                                                </li>
+                                                <li class="breadcrumb-item active" aria-current="page">Migliore per regione</li>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group input-group-dropdown">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Left Action <i class="ik ik-chevron-down"></i></button>
+                                <div class="dropdown-menu" style="height:200px; overflow: auto;">
+                                    <a class="dropdown-item" href="#!"> <h8 id="RicSin">Ricoverati con sintomi</h8></a>
+                                    <a class="dropdown-item" href="#!"> <h8 id="TerInt">Terapia intensiva</h8></a>
+                                    <a class="dropdown-item" href="#!"> <h8 id="IsoDom">Isolamento domiciliare</h8></a>
+                                    <a class="dropdown-item" href="#!"> <h8 id="TotPos">Totale positivi</h8></a>
+                                    <a class="dropdown-item" href="#!"> <h8 id="Dec">Deceduti</h8></a>
+                                    <a class="dropdown-item" href="#!"> <h8 id="DimGua">Dimessi guariti</h8></a>
+                                    <a class="dropdown-item" href="#!"> <h8 id="Tam">Tamponi</h8></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header"><h3>Large Modal</h3></div>
+                                <div class="card-body">
+                                    <div class="modal-dialog modal-lg mt-0 mb-0" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Modal body text goes here.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary">Save changes</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="w-100 clearfix">
+                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2020 Università degli Studi di Salerno DINF. All Rights Reserved.</span>
+                        <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Check the code on github <i class="ik ik-gitlab"></i> <a href="https://github.com/darioTecchia/progetto-bd" class="text-dark" target="_blank">Github</a></span>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+        <script src="../plugins/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+        <script src="../plugins/screenfull/dist/screenfull.js"></script>
+        <script src="../plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="../plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <script src="../plugins/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="../plugins/jvectormap/jquery-jvectormap-it-mill.js"></script>
+        <script src="../plugins/moment/moment.js"></script>
+        <script src="../plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="../plugins/d3/dist/d3.min.js"></script>
+        <script src="../plugins/c3/c3.min.js"></script>
+        <script src="../js/tables.js"></script>
+        <script src="../js/widgets.js"></script>
+        <script src="../js/charts.js"></script>
+        <script src="../dist/js/theme.min.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
